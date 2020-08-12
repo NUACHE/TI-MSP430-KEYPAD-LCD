@@ -71,7 +71,7 @@ __interrupt void Port1_isr(void){
    P2OUT &= ~EN;
    delay_ms(5);
    P2OUT &= ~RS; // Set RS to Data
-   P2OUT = 0x00;// Upper nibble
+   P2OUT = 0x00;// Lower nibble
    P2OUT |= EN;
    P2OUT &= ~EN;
    P2OUT = 0x06;
